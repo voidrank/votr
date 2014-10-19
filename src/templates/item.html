@@ -30,10 +30,10 @@
 				<label class="control-label" for="inputSuccess1" id="item-title">{{item['name']}}</label>
 				<form action='{{ url_for('item', item_name=item['name'])}}' method="POST">
 					<div class="row" id="login-input">
-						<div class="col-sm-2">
+						<div class="col-sm-4">
 							<input type="text" class="form-control" name='uid' placeholder="uid" />
 						</div>
-						<div class="col-sm-2">
+						<div class="col-sm-4">
 							<input type="text" class="form-control" name='passwd' placeholder="passwd" />
 						</div>
 					</div>
