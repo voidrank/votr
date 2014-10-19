@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+	<div class="tile archive-post">
+		{% for i in items %}
+				<blockquote>
+					<a id="item-title" href="{{ url_for('item', item_name=i['name'])}}">
+						<font class="lead">
+							{{ i['name'] }}
+						</font>
+					</a>
+					<small class="item-post-time">
+						{{ i['post-time'] }}
+					</small>
+				</blockquote>
+		{% endfor %}
+	</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block scripts %}
+		<script type="text/javascript" src="{{url_for('static', filename='mine/mine.js')}}"></script>
+{% endblock %}
+{% block title %}Item{% endblock %}
+{% block content %}
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="tile archive-post">
+				<div class="form-group has-success">
+						<label class="control-label" for="inputSuccess1">{{item["description"]}}</label>
+					<label class="control-label" for="inputSuccess1" id="description-title">少年，决定命运的时刻到了！</label>
+				</div>
+				{% for i in item['options'] %}
+						<blockquote>
+							<div id="item-title">
+								<a href="{{i['href']}}">
+									<strong>
+										{{ i['name'] }}
+									</strong>
+								</a>
+								<br>
+								<div>
+									Description:{{i["description"]}}
+								</div>
+							</div>
+						</blockquote>
+				{% endfor %}
+				<label class="control-label" for="inputSuccess1" id="item-title">{{item['name']}}</label>
+				<form action='{{ url_for('item', item_name=item['name'])}}' method="POST">
+					<div class="row" id="login-input">
+						<div class="col-sm-2">
+							<input type="text" class="form-control" name='uid' placeholder="uid" />
+						</div>
+						<div class="col-sm-2">
+							<input type="text" class="form-control" name='passwd' placeholder="passwd" />
+						</div>
+					</div>
+					<select name='brand' id="item-select">
+						{% for i in item['options'] %}
+						<option value={{loop.index}}> {{i['name']}}</option>
+						{% endfor %}
+					</select>
+					<button class="btn btn-hg btn-primary" id="option-submit">
+					Submit
+					</button>
+				</form>
+				<label class="control-label" for="inputSuccess1" id="description-title">{{signal}}</label>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+

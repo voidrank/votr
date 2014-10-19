@@ -1,0 +1,34 @@
+conn.votr.item
+
+{
+	"name":#,
+	"post-time":#,
+	"description":#,
+	"options":{
+		"total":#,
+		1:{
+			"name":#,
+			"description":#,
+			"href":#,
+			"count":#
+		},
+		2:{
+			"name":#,
+			"description":#,
+			"href":#,
+			"count":#
+		}
+		...
+	}
+}
+
+conn.votr.voter
+{
+	"uid":#,
+	"passwd":#,
+	"register-time":#,
+	"record":{
+		"name0":"used",
+		"name1":"used" #record item that the voter has voted
+	}
+}

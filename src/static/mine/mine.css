@@ -1,0 +1,50 @@
+body {
+	background-image:url('bg.jpg');
+	background-attachment:fixed;
+	background-size: cover;
+}
+
+#content-all {
+}
+
+#head-all{
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+.archive-post{
+	text-align:left;
+}
+
+.container-fluid{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.lead{
+	text-align:left;
+}
+.item-post-time{
+	text-align:right;
+}
+
+#description-title{
+	padding-left:0px;
+	font-size:x-large;
+}
+
+#option-submit{
+	margin-bottom:10px;
+}
+
+#login-input{
+	margin-bottom:10px;
+}
+
+#item-select{
+	margin-right:20px;
+}
+
+#item-title{
+	margin-left:0px;
+	font-size:x-large;
+}

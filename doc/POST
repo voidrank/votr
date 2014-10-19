@@ -1,0 +1,7 @@
+POST for /<item_name>
+form
+{
+	"uid":#,
+	"passwd":#,
+	"option":#
+}

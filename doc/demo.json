@@ -1,0 +1,39 @@
+[
+	{	
+		"name":"Is PHP the world-best languages?",
+		"post-time":"2014-10-18 15:59",
+		"options":[
+			{
+				"name":"YES",
+				"description":"",
+				"href":"",
+				"count":0
+			},
+			{
+				"name":"NO",
+				"description":"",
+				"href":"",
+				"count":0
+			}
+		]
+	}
+	,
+	{	
+		"name":"挖掘机技术哪家强?",
+		"post-time":"2014-10-18 16:59",
+		"options":[
+			{
+				"name":"蓝翔",
+				"description":"",
+				"href":"",
+				"count":0
+			},
+			{
+				"name":"上海闵行理工学院",
+				"description":"",
+				"href":"",
+				"count":0
+			}
+		]
+	}
+]
