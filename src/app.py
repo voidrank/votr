@@ -36,7 +36,10 @@ def item(item_name):
 			if voter["record"].get(item_name, None) == None:
 				voter["record"][item_name] = "user"
 				item = db.item.find_one({"name":item_name})
-				item["options"][int(form["brand"])]["count"] += 1
+				if item["options"][int(form["brand"])].get("count",None) == None:
+					item["options"][int(form["brand"])]["count"] = 1
+				else:
+					item["options"][int(form["brand"])]["count"] += 1
 				voter["record"][item_name] = "used"
 				db.item.update({"name":item_name},item)
 				db.voter.update({"uid":voter["uid"]}, voter)
