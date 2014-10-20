@@ -39,7 +39,7 @@
 					</div>
 					<select name='brand' id="item-select">
 						{% for i in item['options'] %}
-						<option value={{loop.index}}> {{i['name']}}</option>
+						<option value={{loop.index-1}}> {{i['name']}}</option>
 						{% endfor %}
 					</select>
 					<button class="btn btn-hg btn-primary" id="option-submit">
