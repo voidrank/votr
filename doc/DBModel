@@ -1,10 +1,18 @@
-conn.votr.item
+==========================
+collection: conn.votr.item
+
+index:
+{"name":1} # for DBA
+{"post-time":1} # for DBA
+{"host":1, "post-time":1} # for user
+{"host":1, "name":1} # for user search
 
 {
 	"name":#,
 	"post-time":#,
 	"description":#,
 	"image":#,
+	"host":#,
 	"options":{
 		"total":#,
 		1:{
@@ -25,13 +33,27 @@ conn.votr.item
 	}
 }
 
-conn.votr.voter
+===========================
+collection:conn.votr.voter
+
+index:
+{"uid":1}
+
 {
 	"uid":#,
 	"passwd":#,
 	"register-time":#,
-	"record":{
-		"name0":#the option you choose,
-		"name1":# #record item that the voter has voted
-	}
+}
+
+===========================
+collection:conn.votr.record
+
+index:
+{"voter":1, option:1}
+{"item":1, option:1}
+
+{
+	"voter":uid,
+	"item":#,
+	"option":a number
 }
