@@ -4,18 +4,21 @@ conn.votr.item
 	"name":#,
 	"post-time":#,
 	"description":#,
+	"image":#,
 	"options":{
 		"total":#,
 		1:{
 			"name":#,
 			"description":#,
 			"href":#,
+			"image":"url",
 			"count":#
 		},
 		2:{
 			"name":#,
 			"description":#,
 			"href":#,
+			"image":"url",
 			"count":#
 		}
 		...
@@ -28,7 +31,7 @@ conn.votr.voter
 	"passwd":#,
 	"register-time":#,
 	"record":{
-		"name0":"used",
-		"name1":"used" #record item that the voter has voted
+		"name0":#the option you choose,
+		"name1":# #record item that the voter has voted
 	}
 }
