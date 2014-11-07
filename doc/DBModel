@@ -1,5 +1,5 @@
 ==========================
-collection: conn.votr.item
+collection : conn.votr.item
 
 index:
 {"name":1} # for DBA
@@ -34,7 +34,7 @@ index:
 }
 
 ===========================
-collection:conn.votr.voter
+collection : conn.votr.voter
 
 index:
 {"uid":1}
@@ -46,7 +46,7 @@ index:
 }
 
 ===========================
-collection:conn.votr.record
+collection : conn.votr.record
 
 index:
 {"voter":1, option:1}
@@ -57,3 +57,18 @@ index:
 	"item":#,
 	"option":a number
 }
+
+==========================
+collection : conn.votr.participation_record
+
+index:
+{"item":1, "voter":1}
+{"votr":1, "item":1}
+
+#TODO: post-time (how to avoid duplicating this BSON doc)
+
+{
+	"item":#,
+	"voter":uid
+}
+
